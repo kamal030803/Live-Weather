@@ -1,0 +1,30 @@
+#city-input, #weather-output {
+    margin: 1em 0 0.5em 0;
+	font-weight: 600;
+	font-family: 'Titillium Web', sans-serif;
+	position: relative;  
+	font-size: 20px;
+	line-height: 30px;
+	background-color: #fff;
+  }
+  body{
+    background-color: #3498DB;
+  }
+  .btn{
+    color: #000;
+    background-color: #F4D03F;
+    text-shadow: 0 0.5px #ffffff, 0 0.5px #ffffff;
+  }
+  
+  .banner {
+    margin: 1em 0 0.5em 0;
+	color: #F4D03F;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 5px #000, 0 5px #252525;
+    font-size: 70px;
+    font-weight: 600;
+  }
