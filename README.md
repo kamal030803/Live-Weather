@@ -1,6 +1,6 @@
 # Live-Weather
 Open to view website - 
-[Website](http://127.0.0.1:5500/Live-Weather/index.html)
+[Website](https://kamal030803.github.io/Live-Weather/))
 ## Built Using
 ```bash
 JavaScript
