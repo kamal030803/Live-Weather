@@ -1,30 +1,81 @@
-#city-input, #weather-output {
-    margin: 1em 0 0.5em 0;
-	font-weight: 600;
-	font-family: 'Titillium Web', sans-serif;
-	position: relative;  
-	font-size: 20px;
-	line-height: 30px;
-	background-color: #fff;
-  }
-  body{
-    background-color: #3498DB;
-  }
-  .btn{
-    color: #000;
-    background-color: #F4D03F;
-    text-shadow: 0 0.5px #ffffff, 0 0.5px #ffffff;
-  }
-  
-  .banner {
-    margin: 1em 0 0.5em 0;
-	color: #F4D03F;
-	font-weight: normal;
-	font-family: 'Ultra', sans-serif;   
-	font-size: 36px;
-	line-height: 42px;
-	text-transform: uppercase;
-	text-shadow: 0 5px #000, 0 5px #252525;
-    font-size: 70px;
-    font-weight: 600;
-  }
+    .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0 0.5em 0;
+        color: #F4D03F;
+        font-weight: normal;
+        font-family: 'Ultra', sans-serif;   
+        font-size: 36px;
+        line-height: 42px;
+        text-transform: uppercase;
+        text-shadow: 0 5px #000, 0 5px #252525;
+        font-size: 70px;
+        font-weight: 600;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #3498DB;
+      }
+      
+      .weather-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      
+      .weather-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 50px;
+      }
+      
+      #temperature {
+        font-size: 100px;
+        margin: 0;
+      }
+      
+      #condition {
+        font-size: 50px;
+        margin: 0;
+      }
+      
+      #location {
+        font-size: 50px;
+        margin: 0;
+      }
+      
+      input[type="text"] {
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: none;
+        margin: 1em 0 0.5em 0;
+        font-weight: 600;
+        font-family: 'Titillium Web', sans-serif;
+        position: relative;  
+        font-size: 20px;
+        line-height: 30px;
+        background-color: #fff;
+      }
+      
+      button {
+        padding: 15px 60px;
+        border-radius: 5px;
+        border: none;
+        color: #000;
+        background-color: #F4D03F;
+        text-shadow: 0 0.5px #ffffff, 0 0.5px #ffffff;
+        cursor: pointer;
+      }
