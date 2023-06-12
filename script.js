@@ -1,18 +1,37 @@
-const city = document.getElementById('city-input');
-const flag = document.getElementById('flag');
-
-
-
-
-showWeatherData = (weatherData) => {
-    document.getElementById("city-name").innerText = weatherData.name
-    document.getElementById("weather-type").innerText = weatherData.weather[0].main
-    document.getElementById("temp").innerText = (weatherData.main.temp)
-  }
-  
-  
-const searchCity=async()=>{
-     let response=await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city.value}&APPID=71f6779186cc32448b4c412eea65b982&units=metric`)
-     let data=await response.json()
-     showWeatherData(data)
+function getWeatherData(location) {
+  const apiKey = "6eb1180161eccb06843669dbee0f87b3";
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
+  return fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const weatherData = {
+        temperature: data.main.temp,
+        condition: data.weather[0].main,
+        location: data.name,
+      };
+      return weatherData;
+    });
 }
+function updateUI(weatherData) {
+  const temperature = document.querySelector("#temperature");
+  const condition = document.querySelector("#condition");
+  const location = document.querySelector("#location");
+
+  temperature.textContent = `${weatherData.temperature}°C`;
+  condition.textContent = weatherData.condition;
+  location.textContent = weatherData.location;
+}
+
+const searchBtn = document.querySelector("#search-btn");
+const searchBar = document.querySelector("#search-bar");
+
+searchBtn.addEventListener("click", () => {
+  const location = searchBar.value;
+  getWeatherData(location)
+    .then(weatherData => {
+      updateUI(weatherData);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
